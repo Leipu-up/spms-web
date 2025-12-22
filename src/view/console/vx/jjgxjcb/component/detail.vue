@@ -29,7 +29,7 @@ function handleRowClick(row: any) {
   selectedRowId.value = row.id
   console.log('Row clicked:', row)
   console.log('Selected Row ID:', selectedRowId.value)
-  alert(`选中行ID: ${row.id}`)  // 添加alert确保能看到输出
+  alert(`选中行ID: ${row.id}`) // 添加alert确保能看到输出
 }
 </script>
 
@@ -101,7 +101,6 @@ function handleRowClick(row: any) {
           hide-add
           hide-ctrl
         />
-
       </AGroup>
 
       <AGroup title="工序明细实测值">
