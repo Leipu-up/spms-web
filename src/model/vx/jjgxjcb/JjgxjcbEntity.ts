@@ -5,6 +5,7 @@ import { BaseEntity } from '@/base/BaseEntity'
 import { JjcpbglEntity } from '@/model/vx/jjcpbgl/JjcpbglEntity'
 import { JjgxbglEntity } from '@/model/vx/jjgxbgl/JjgxbglEntity'
 import { WxyhEntity } from '@/model/vx/wxyh/WxyhEntity'
+import { JjgxjcjgbEntity } from './JjgxjcjgbEntity'
 
 /**
  * # 用户实体
@@ -105,6 +106,12 @@ export class JjgxjcbEntity extends BaseEntity implements IPayload {
   })
   @Type(JjcpbglEntity)
   jjcpbgl!: JjcpbglEntity
+
+  @Field({
+    label: '机加工序检查结果表信息',
+  })
+  @Type(JjgxjcjgbEntity, true)
+  jjgxjcjgbEntityList: JjgxjcjgbEntity[] = []
 
   getPayloadLabel(): string {
     return this.pch
