@@ -52,7 +52,7 @@ const {
       </AGroup>
       <AGroup title="工序明细">
         <ATable
-          :data-list="formData.jjgxxqbglList"
+          :data-list="formData.details"
           :entity="JjgxxqbglEntity"
           ctrl-width="60"
           hide-add

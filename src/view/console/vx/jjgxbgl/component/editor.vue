@@ -32,12 +32,12 @@ const {
 
 async function addDetail() {
   const detail: JjgxxqbglEntity = await DialogUtil.show(JjgxbglDetailEditor)
-  formData.value.jjgxxqbglList.push(detail)
+  formData.value.details.push(detail)
 }
 
 async function deleteDetail(index: number) {
   await FeedbackUtil.confirmWarning('是否删除选中行的工序？')
-  formData.value.jjgxxqbglList.splice(index, 1)
+  formData.value.details.splice(index, 1)
 }
 </script>
 
@@ -80,7 +80,7 @@ async function deleteDetail(index: number) {
       <AGroup title="机加工序详细">
         <ATable
           :column-list="getTableConfigList(JjgxxqbglEntity).filter((item) => !['createTime'].includes(item.key))"
-          :data-list="formData.jjgxxqbglList"
+          :data-list="formData.details"
           :entity="JjgxxqbglEntity"
           hide-delete
           hide-edit

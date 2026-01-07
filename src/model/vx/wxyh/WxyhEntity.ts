@@ -15,6 +15,18 @@ export class WxyhEntity extends BaseEntity implements IUser, IPayload {
   })
   @Search()
   @Field({
+    label: '工号',
+  })
+  employeeNo!: string
+
+  @Form({
+    requiredString: true,
+  })
+  @Table({
+    force: true,
+  })
+  @Search()
+  @Field({
     label: '微信名',
   })
   nickname!: string

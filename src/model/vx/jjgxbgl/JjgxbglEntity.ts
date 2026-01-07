@@ -56,7 +56,7 @@ export class JjgxbglEntity extends BaseEntity implements IPayload {
     label: '机加工序详情表',
   })
   @Type(JjgxxqbglEntity, true)
-  jjgxxqbglList: JjgxxqbglEntity[] = []
+  details: JjgxxqbglEntity[] = []
 
   getPayloadLabel(): string {
     return this.gxmc
