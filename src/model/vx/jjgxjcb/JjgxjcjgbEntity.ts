@@ -58,7 +58,6 @@ export class JjgxjcjgbEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '检查时间',
   })
@@ -81,7 +80,6 @@ export class JjgxjcjgbEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '判定结果(OK/NG)',
   })

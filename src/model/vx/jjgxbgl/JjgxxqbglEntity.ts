@@ -1,7 +1,9 @@
 import type { IPayload } from '@airpower/web'
-import { Field, Form, Search, Table } from '@airpower/web'
-
+import { Field, Form, Table } from '@airpower/web'
 import { BaseEntity } from '@/base/BaseEntity'
+
+import { PcTypeEnum } from './PcTypeEnum'
+import { TstxTypeEnum } from './TstxTypeEnum'
 
 /**
  * # 用户实体
@@ -13,7 +15,6 @@ export class JjgxxqbglEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '序号',
   })
@@ -25,7 +26,6 @@ export class JjgxxqbglEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '规范/公差',
   })
@@ -37,9 +37,9 @@ export class JjgxxqbglEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '特殊特性',
+    dictionary: TstxTypeEnum,
   })
   tstx!: string
 
@@ -49,7 +49,6 @@ export class JjgxxqbglEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '仪器',
   })
@@ -61,9 +60,9 @@ export class JjgxxqbglEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '频次',
+    dictionary: PcTypeEnum,
   })
   pc!: string
 

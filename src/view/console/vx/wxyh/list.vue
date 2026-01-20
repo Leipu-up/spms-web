@@ -15,8 +15,7 @@ const hook = useMyTable(WxyhService, {
       :use-hook="hook"
       ctrl-width="150"
       show-enable-and-disable
-      hide-add
-      hide-edit
+      show-export
     />
   </APanel>
 </template>

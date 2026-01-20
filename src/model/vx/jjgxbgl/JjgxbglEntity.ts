@@ -24,7 +24,6 @@ export class JjgxbglEntity extends BaseEntity implements IPayload {
   @Table({
     formatter: row => row.jjcpbgl?.cpmc || '-',
   })
-  @Search()
   @Field({
     label: '产品名称',
   })

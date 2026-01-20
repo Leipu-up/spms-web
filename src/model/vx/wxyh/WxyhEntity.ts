@@ -20,7 +20,7 @@ export class WxyhEntity extends BaseEntity implements IUser, IPayload {
   employeeNo!: string
 
   @Form({
-    requiredString: true,
+    requiredString: false,
   })
   @Table({
     force: true,
@@ -61,12 +61,13 @@ export class WxyhEntity extends BaseEntity implements IUser, IPayload {
   })
   realName!: string
 
-  @Form({})
+  @Form({
+    requiredString: true,
+  })
   @Table({
     hide: false,
     copy: true,
   })
-  @Search()
   @Field({
     label: '身份证号',
   })

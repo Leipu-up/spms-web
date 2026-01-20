@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { FormInstance } from 'element-plus'
-import { ADialog, AInput, DialogProps, getFieldLabel } from '@airpower/web'
+import { ADialog, AFormField, DialogProps } from '@airpower/web'
 import { ref } from 'vue'
 import { JjgxxqbglEntity } from '@/model/vx/jjgxbgl/JjgxxqbglEntity'
 import { JjgxxqbglService } from '@/model/vx/jjgxbgl/JjgxxqbglService'
@@ -34,51 +34,31 @@ async function onSubmit() {
       label-width="120px"
       @submit.prevent
     >
-      <el-form-item
-        :label="getFieldLabel(JjgxxqbglEntity, 'xh')"
-        prop="xh"
-      >
-        <AInput
-          v-model.quantity="formData.xh"
-          :entity="JjgxxqbglEntity"
-        />
-      </el-form-item>
-      <el-form-item
-        :label="getFieldLabel(JjgxxqbglEntity, 'gfgc')"
-        prop="gfgc"
-      >
-        <AInput
-          v-model.quantity="formData.gfgc"
-          :entity="JjgxxqbglEntity"
-        />
-      </el-form-item>
-      <el-form-item
-        :label="getFieldLabel(JjgxxqbglEntity, 'tstx')"
-        prop="tstx"
-      >
-        <AInput
-          v-model.quantity="formData.tstx"
-          :entity="JjgxxqbglEntity"
-        />
-      </el-form-item>
-      <el-form-item
-        :label="getFieldLabel(JjgxxqbglEntity, 'yq')"
-        prop="yq"
-      >
-        <AInput
-          v-model.quantity="formData.yq"
-          :entity="JjgxxqbglEntity"
-        />
-      </el-form-item>
-      <el-form-item
-        :label="getFieldLabel(JjgxxqbglEntity, 'pc')"
-        prop="pc"
-      >
-        <AInput
-          v-model.quantity="formData.pc"
-          :entity="JjgxxqbglEntity"
-        />
-      </el-form-item>
+      <AFormField
+        v-model="formData"
+        :entity="JjgxxqbglEntity"
+        field="xh"
+      />
+      <AFormField
+        v-model="formData"
+        :entity="JjgxxqbglEntity"
+        field="gfgc"
+      />
+      <AFormField
+        v-model="formData"
+        :entity="JjgxxqbglEntity"
+        field="tstx"
+      />
+      <AFormField
+        v-model="formData"
+        :entity="JjgxxqbglEntity"
+        field="yq"
+      />
+      <AFormField
+        v-model="formData"
+        :entity="JjgxxqbglEntity"
+        field="pc"
+      />
     </el-form>
   </ADialog>
 </template>

@@ -17,6 +17,7 @@ const hook = useMyTable(JjgxjcbService, {
       hide-add
       hide-edit
       show-detail
+      show-export
     />
   </APanel>
 </template>

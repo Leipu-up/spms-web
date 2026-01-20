@@ -36,7 +36,6 @@ export class JjcpbglEntity extends BaseEntity implements IPayload {
   @Table({
     force: true,
   })
-  @Search()
   @Field({
     label: '产品版本',
   })
