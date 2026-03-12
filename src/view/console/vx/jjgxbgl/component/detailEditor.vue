@@ -59,6 +59,12 @@ async function onSubmit() {
         :entity="JjgxxqbglEntity"
         field="pc"
       />
+
+      <AFormField
+        v-model="formData"
+        :entity="JjgxxqbglEntity"
+        field="dj"
+      />
     </el-form>
   </ADialog>
 </template>

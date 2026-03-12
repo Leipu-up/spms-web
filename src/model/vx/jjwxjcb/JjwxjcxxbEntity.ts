@@ -2,13 +2,10 @@ import type { IPayload } from '@airpower/web'
 import { Field, Form, Table } from '@airpower/web'
 import { BaseEntity } from '@/base/BaseEntity'
 
-import { PcTypeEnum } from './PcTypeEnum'
-import { TstxTypeEnum } from './TstxTypeEnum'
-
 /**
  * # 用户实体
  */
-export class JjgxxqbglEntity extends BaseEntity implements IPayload {
+export class JjwxjcxxbEntity extends BaseEntity implements IPayload {
   @Form({
     requiredString: true,
   })
@@ -60,20 +57,9 @@ export class JjgxxqbglEntity extends BaseEntity implements IPayload {
     force: true,
   })
   @Field({
-    label: '频次',
+    label: '样品数量',
   })
-  pc!: string
-
-  @Form({
-    requiredString: true,
-  })
-  @Table({
-    force: true,
-  })
-  @Field({
-    label: '刀具',
-  })
-  dj!: string
+  ypsl!: string
 
   getPayloadLabel(): string {
     return this.xh

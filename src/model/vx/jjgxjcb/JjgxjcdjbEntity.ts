@@ -7,7 +7,7 @@ import { JjgxxqbglEntity } from '@/model/vx/jjgxbgl/JjgxxqbglEntity'
 /**
  * # 用户实体
  */
-export class JjgxjcjgbEntity extends BaseEntity implements IPayload {
+export class JjgxjcdjbEntity extends BaseEntity implements IPayload {
   @Form({
     requiredString: true,
   })
@@ -45,23 +45,12 @@ export class JjgxjcjgbEntity extends BaseEntity implements IPayload {
     requiredString: true,
   })
   @Table({
-    force: true,
+    formatter: row => row.jjgxxqbgl?.dj || '-',
   })
   @Field({
-    label: '工件状态',
+    label: '刀具',
   })
-  gjzt!: string
-
-  @Form({
-    requiredString: true,
-  })
-  @Table({
-    force: true,
-  })
-  @Field({
-    label: '检查时间',
-  })
-  jcsj!: string
+  jjgxxqbglDj!: string
 
   @Form({
     requiredString: true,
@@ -72,29 +61,7 @@ export class JjgxjcjgbEntity extends BaseEntity implements IPayload {
   @Field({
     label: '实测值',
   })
-  scz!: string
-
-  @Form({
-    requiredString: true,
-  })
-  @Table({
-    force: true,
-  })
-  @Field({
-    label: '判定结果(OK/NG)',
-  })
-  pdjg!: string
-
-  @Form({
-    requiredString: true,
-  })
-  @Table({
-    force: true,
-  })
-  @Field({
-    label: '不合格品报告',
-  })
-  bhepbg!: string
+  djscz!: string
 
   @Field({
     label: '机加工序详情表',
@@ -103,6 +70,6 @@ export class JjgxjcjgbEntity extends BaseEntity implements IPayload {
   jjgxxqbgl!: JjgxxqbglEntity
 
   getPayloadLabel(): string {
-    return this.gjzt
+    return this.djscz
   }
 }

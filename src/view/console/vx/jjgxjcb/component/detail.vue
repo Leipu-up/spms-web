@@ -4,6 +4,7 @@ import { ADialog, AFormField, AGroup, ATable, DialogProps, useDetail } from '@ai
 import { JjgxjcbEntity } from '@/model/vx/jjgxjcb/JjgxjcbEntity'
 import { JjgxjcbService } from '@/model/vx/jjgxjcb/JjgxjcbService'
 import { JjgxjcjgbEntity } from '@/model/vx/jjgxjcb/JjgxjcjgbEntity'
+import { JjgxjcdjbEntity } from '@/model/vx/jjgxjcb/JjgxjcdjbEntity'
 
 const props = defineProps(DialogProps.withParam(new JjgxjcbEntity()))
 
@@ -72,6 +73,16 @@ const {
             disabled
           />
         </el-form-item>
+      </AGroup>
+
+      <AGroup title="工序明细-换刀后实测值">
+        <ATable
+          :data-list="formData.jjgxjcdjbEntityList"
+          :entity="JjgxjcdjbEntity"
+          ctrl-width="60"
+          hide-add
+          hide-ctrl
+        />
       </AGroup>
 
       <AGroup title="工序明细-实测值">

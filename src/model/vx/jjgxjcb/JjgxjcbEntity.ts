@@ -4,6 +4,7 @@ import { Field, Form, Search, Table, Type } from '@airpower/web'
 import { BaseEntity } from '@/base/BaseEntity'
 import { JjcpbglEntity } from '@/model/vx/jjcpbgl/JjcpbglEntity'
 import { JjgxbglEntity } from '@/model/vx/jjgxbgl/JjgxbglEntity'
+import { JjgxjcdjbEntity } from '@/model/vx/jjgxjcb/JjgxjcdjbEntity'
 import { WxyhEntity } from '@/model/vx/wxyh/WxyhEntity'
 import { JjgxjcjgbEntity } from './JjgxjcjgbEntity'
 
@@ -112,6 +113,12 @@ export class JjgxjcbEntity extends BaseEntity implements IPayload {
   })
   @Type(JjgxjcjgbEntity, true)
   jjgxjcjgbEntityList: JjgxjcjgbEntity[] = []
+
+  @Field({
+    label: '机加工序检查换刀表信息',
+  })
+  @Type(JjgxjcdjbEntity, true)
+  jjgxjcdjbEntityList: JjgxjcdjbEntity[] = []
 
   getPayloadLabel(): string {
     return this.pch

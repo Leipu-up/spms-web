@@ -61,13 +61,6 @@ export class WxyhEntity extends BaseEntity implements IUser, IPayload {
   })
   realName!: string
 
-  @Form({
-    requiredString: true,
-  })
-  @Table({
-    hide: false,
-    copy: true,
-  })
   @Field({
     label: '身份证号',
   })
