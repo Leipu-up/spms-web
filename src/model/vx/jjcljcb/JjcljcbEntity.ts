@@ -2,13 +2,13 @@ import type { IPayload } from '@airpower/web'
 import { Field, Form, Search, Table, Type } from '@airpower/web'
 
 import { BaseEntity } from '@/base/BaseEntity'
+import { JjcljcxxbEntity } from '@/model/vx/jjcljcb/JjcljcxxbEntity'
 import { JjcpbglEntity } from '@/model/vx/jjcpbgl/JjcpbglEntity'
-import { JjwxjcxxbEntity } from '@/model/vx/jjwxjcb/JjwxjcxxbEntity'
 
 /**
  * # 用户实体
  */
-export class JjwxjcbEntity extends BaseEntity implements IPayload {
+export class JjcljcbEntity extends BaseEntity implements IPayload {
   @Form({
     requiredString: true,
   })
@@ -25,7 +25,7 @@ export class JjwxjcbEntity extends BaseEntity implements IPayload {
     formatter: row => row.jjcpbgl?.cpmc || '-',
   })
   @Field({
-    label: '产品名称',
+    label: '材料名称',
   })
   jjcpbglCpmc!: string
 
@@ -33,7 +33,7 @@ export class JjwxjcbEntity extends BaseEntity implements IPayload {
     formatter: row => row.jjcpbgl?.cpxh || '-',
   })
   @Field({
-    label: '产品型号',
+    label: '材料型号',
   })
   jjcpbglCpxh!: string
 
@@ -41,7 +41,7 @@ export class JjwxjcbEntity extends BaseEntity implements IPayload {
     formatter: row => row.jjcpbgl?.cpbb || '-',
   })
   @Field({
-    label: '产品版本',
+    label: '材料尺寸',
   })
   jjcpbglCpbb!: string
 
@@ -54,8 +54,8 @@ export class JjwxjcbEntity extends BaseEntity implements IPayload {
   @Field({
     label: '机加工序详情表',
   })
-  @Type(JjwxjcxxbEntity, true)
-  details: JjwxjcxxbEntity[] = []
+  @Type(JjcljcxxbEntity, true)
+  details: JjcljcxxbEntity[] = []
 
   getPayloadLabel(): string {
     return this.gysmc
